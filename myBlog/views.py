@@ -4,7 +4,7 @@ from .models import Post
 
 def index(request):
     post_list = Post.objects.all().order_by('-created_time')
-    print(post_list, post_list[0].pk)
+    # print(post_list, post_list[0].pk)
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
